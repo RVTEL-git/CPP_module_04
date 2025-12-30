@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 12:49:27 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/29 14:11:48 by barmarti         ###   ########.fr       */
+/*   Created: 2025/12/29 13:29:56 by barmarti          #+#    #+#             */
+/*   Updated: 2025/12/29 14:33:02 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
+#include "Brain.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
+	private:
+		Brain *_brain;
 	public:
-		Cat( void );
-		Cat( const Cat &copy );
-		~Cat( void );
+		WrongCat( void );
+		WrongCat( const WrongCat &copy );
+		~WrongCat( void );
 
-		Cat &operator=(const Cat &rhs);
-		virtual void makeSound( void ) const ;
+		WrongCat		&operator=(const WrongCat &rhs);
+		virtual void	makeSound( void ) const ;
+		void			setIdea( int index, std::string idea);
+		std::string		getIdea( int index ) const ;
 };
 
 #endif

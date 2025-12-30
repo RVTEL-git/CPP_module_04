@@ -6,29 +6,33 @@
 #    By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/23 11:28:34 by barmarti          #+#    #+#              #
-#    Updated: 2025/12/29 13:36:08 by barmarti         ###   ########.fr        #
+#    Updated: 2025/12/30 18:04:00 by barmarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(HEADER_DIR)
 
-NAME = ex00
+NAME = ex02
 
-HEADER_DIR = Includes
-HEADER = $(HEADER_DIR)/Animal.hpp      \
-		 $(HEADER_DIR)/Dog.hpp         \
-		 $(HEADER_DIR)/Cat.hpp         \
-		 $(HEADER_DIR)/WrongAnimal.hpp \
-		 $(HEADER_DIR)/WrongCat.hpp
+HEADER_DIR = includes
+HEADER = $(HEADER_DIR)/AMateria.hpp         \
+		 $(HEADER_DIR)/Ice.hpp              \
+		 $(HEADER_DIR)/Cure.hpp             \
+		 $(HEADER_DIR)/Environment.hpp      \
+		 $(HEADER_DIR)/Character.hpp        \
+		 $(HEADER_DIR)/ICharacter.hpp       \
+		 $(HEADER_DIR)/IMateriaSource.hpp   \
+		 $(HEADER_DIR)/MateriaSource.hpp
 
 SRCS_DIR = source
-SRCS = $(SRCS_DIR)/main.cpp        \
-	   $(SRCS_DIR)/Animal.cpp      \
-	   $(SRCS_DIR)/Dog.cpp         \
-	   $(SRCS_DIR)/Cat.cpp         \
-	   $(SRCS_DIR)/WrongAnimal.cpp \
-	   $(SRCS_DIR)/WrongCat.cpp
+SRCS = $(SRCS_DIR)/AMateria.cpp       \
+	   $(SRCS_DIR)/Ice.cpp            \
+	   $(SRCS_DIR)/Cure.cpp           \
+	   $(SRCS_DIR)/Environment.cpp    \
+	   $(SRCS_DIR)/Character.cpp      \
+	   $(SRCS_DIR)/MateriaSource.cpp  \
+	   $(SRCS_DIR)/main.cpp
 
 SRCS_FILES = $(SRCS)
 

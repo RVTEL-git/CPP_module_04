@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 11:39:46 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:47:18 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/12/30 17:46:13 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,12 @@ Animal	&Animal::operator=( const Animal &rhs )
 	return (*this);
 }
 
+Brain *Animal::getBrain( void ) const
+{
+	return (NULL);
+}
+
 const std::string &Animal::getType( void ) const
 {
 	return (this->_type);
-}
-
-void Animal::makeSound( void ) const
-{
-	std::cout << "Some randome animal noise" << std::endl;
-	return;
 }

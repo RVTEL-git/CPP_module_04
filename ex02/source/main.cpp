@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 12:53:31 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:47:27 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/12/30 17:46:32 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,27 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
+	// const Animal* meta = new Animal();
 	const Animal* i = new Dog();
 	const Animal* j = new Cat();
 
-	const WrongAnimal* k = new WrongCat();
 
 	std::cout << i->getType() << " ";
 	i->makeSound();
+	if (i->getBrain())
+	{
+		i->getBrain()->setIdea(5, "Play with the ball");
+		std::cout << i->getType() << " " << i->getBrain()->getIdea(5) << std::endl;
+	}
 	std::cout << j->getType() << " ";
 	j->makeSound();
-	std::cout << meta->getType() << " ";
-	meta->makeSound();
+	// std::cout << meta->getType() << " ";
+	// meta->makeSound();
 
-	std::cout << k->getType() << " ";
-	k->makeSound();
-
-	delete meta;
+	// delete meta;
 	delete i;
 	delete j;
-	delete k;
+
 
 	return (0);
 }

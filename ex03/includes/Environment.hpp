@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Environment.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 12:49:27 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/29 14:11:48 by barmarti         ###   ########.fr       */
+/*   Created: 2025/12/30 14:09:59 by barmarti          #+#    #+#             */
+/*   Updated: 2025/12/30 18:01:06 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef ENVIRONMENT_HPP
+#define ENVIRONMENT_HPP
 
-#include "Animal.hpp"
+#include "AMateria.hpp"
+#include <string>
 
-class Cat : public Animal
+class Environment
 {
+	private:
+		const std::string _name;
+		unsigned int	_count;
+		unsigned int	_capacity;
+		AMateria		**_items;
 	public:
-		Cat( void );
-		Cat( const Cat &copy );
-		~Cat( void );
+		Environment( std::string place );
+		~Environment();
 
-		Cat &operator=(const Cat &rhs);
-		virtual void makeSound( void ) const ;
+		void				addItem( AMateria *item );
+		const std::string	&getName( void ) const;
+		unsigned int		getCount( void ) const;
 };
 
 #endif

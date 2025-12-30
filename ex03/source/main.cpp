@@ -5,38 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 12:53:31 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:47:27 by barmarti         ###   ########.fr       */
+/*   Created: 2025/12/29 15:58:19 by barmarti          #+#    #+#             */
+/*   Updated: 2025/12/30 18:15:10 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongCat.hpp"
+#include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "ICharacter.hpp"
+#include "Character.hpp"
+#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
 #include <iostream>
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* i = new Dog();
-	const Animal* j = new Cat();
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
 
-	const WrongAnimal* k = new WrongCat();
+	ICharacter* me = new Character("me");
 
-	std::cout << i->getType() << " ";
-	i->makeSound();
-	std::cout << j->getType() << " ";
-	j->makeSound();
-	std::cout << meta->getType() << " ";
-	meta->makeSound();
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
 
-	std::cout << k->getType() << " ";
-	k->makeSound();
+	ICharacter* bob = new Character("bob");
+		
+	me->use(0, *bob);
+	me->use(1, *bob);
 
-	delete meta;
-	delete i;
-	delete j;
-	delete k;
+	delete bob;
+	delete me;
+	delete src;
 
-	return (0);
+	return 0;
 }

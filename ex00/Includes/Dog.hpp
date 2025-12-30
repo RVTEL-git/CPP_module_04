@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 11:50:00 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/23 13:03:00 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/12/29 14:11:58 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ class Dog : public Animal
 {
 	public:
 		Dog( void );
-		Dog( const std::string &type );
+		Dog( const Dog &copy );
 		~Dog( void );
 
 		Dog &operator=(const Dog &rhs);
+		virtual void makeSound( void ) const ;
 };
 
 #endif

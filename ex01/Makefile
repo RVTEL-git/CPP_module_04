@@ -6,21 +6,22 @@
 #    By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/23 11:28:34 by barmarti          #+#    #+#              #
-#    Updated: 2025/12/29 13:36:08 by barmarti         ###   ########.fr        #
+#    Updated: 2025/12/29 14:42:29 by barmarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(HEADER_DIR)
 
-NAME = ex00
+NAME = ex01
 
 HEADER_DIR = Includes
 HEADER = $(HEADER_DIR)/Animal.hpp      \
 		 $(HEADER_DIR)/Dog.hpp         \
 		 $(HEADER_DIR)/Cat.hpp         \
 		 $(HEADER_DIR)/WrongAnimal.hpp \
-		 $(HEADER_DIR)/WrongCat.hpp
+		 $(HEADER_DIR)/WrongCat.hpp    \
+		 $(HEADER_DIR)/Brain.hpp       \
 
 SRCS_DIR = source
 SRCS = $(SRCS_DIR)/main.cpp        \
@@ -28,7 +29,8 @@ SRCS = $(SRCS_DIR)/main.cpp        \
 	   $(SRCS_DIR)/Dog.cpp         \
 	   $(SRCS_DIR)/Cat.cpp         \
 	   $(SRCS_DIR)/WrongAnimal.cpp \
-	   $(SRCS_DIR)/WrongCat.cpp
+	   $(SRCS_DIR)/WrongCat.cpp    \
+	   $(SRCS_DIR)/Brain.cpp
 
 SRCS_FILES = $(SRCS)
 

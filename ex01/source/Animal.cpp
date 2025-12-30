@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 11:39:46 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:47:18 by barmarti         ###   ########.fr       */
+/*   Updated: 2025/12/30 17:46:44 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ Animal	&Animal::operator=( const Animal &rhs )
 	if (this != &rhs)
 		this->_type = rhs._type;
 	return (*this);
+}
+
+Brain *Animal::getBrain( void ) const
+{
+	return (NULL);
 }
 
 const std::string &Animal::getType( void ) const
