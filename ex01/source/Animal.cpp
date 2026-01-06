@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 11:39:46 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:46:44 by barmarti         ###   ########.fr       */
+/*   Updated: 2026/01/02 14:34:38 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ Animal::Animal ( const std::string &type ) : _type(type)
 	return ;
 }
 
-Animal::Animal( const Animal &copy)
+Animal::Animal( const Animal &copy) : _type(copy._type)
 {
 	std::cout << "Copy constructor Animal class called" << std::endl;
-	*this = copy;
 	return ;
 }
 

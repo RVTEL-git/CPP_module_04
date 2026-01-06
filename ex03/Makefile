@@ -6,14 +6,14 @@
 #    By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/23 11:28:34 by barmarti          #+#    #+#              #
-#    Updated: 2025/12/30 18:04:00 by barmarti         ###   ########.fr        #
+#    Updated: 2026/01/02 11:28:01 by barmarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(HEADER_DIR)
 
-NAME = ex02
+NAME = ex03
 
 HEADER_DIR = includes
 HEADER = $(HEADER_DIR)/AMateria.hpp         \

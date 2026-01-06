@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 14:14:34 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:59:35 by barmarti         ###   ########.fr       */
+/*   Updated: 2026/01/02 11:37:59 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ Environment::~Environment()
 	std::cout << "Environment destructor called" << std::endl;
 	for(unsigned int i = 0; i < _count; i++)
 		delete this->_items[i];
-	delete[] _items;
+	if (_items != NULL)
+		delete[] _items;
 }
 
 void Environment::addItem( AMateria *item )

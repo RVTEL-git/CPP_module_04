@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 16:20:26 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 18:00:37 by barmarti         ###   ########.fr       */
+/*   Updated: 2026/01/02 11:34:15 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ Character::~Character( void )
 		if(this->_inventory[i] != NULL)
 			delete _inventory[i];
 	}
+	delete _floor;
 }
 
 Character &Character::operator=(const Character &rhs)

@@ -6,18 +6,19 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 17:10:37 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:45:10 by barmarti         ###   ########.fr       */
+/*   Updated: 2026/01/06 11:26:46 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 #include <iostream>
-#include <algorithm>
+
 
 MateriaSource::MateriaSource()
 {
 	std::cout << "Default MateriaSource constructor called" << std::endl;
-	std::fill(_materia, _materia + 4, static_cast<AMateria*>(NULL));
+	for(int i = 0; i < 4; i++)
+		this->_materia[i] = NULL;
 }
 
 MateriaSource::MateriaSource( const MateriaSource &src )

@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:31:23 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:47:30 by barmarti         ###   ########.fr       */
+/*   Updated: 2026/01/02 14:25:29 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ const std::string &WrongAnimal::getType( void ) const
 
 void WrongAnimal::makeSound( void ) const
 {
-	std::cout << "Some randome WrongAnimal noise" << std::endl;
+	std::cout << "Some random WrongAnimal noise" << std::endl;
 	return;
 }

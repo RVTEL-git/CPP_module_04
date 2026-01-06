@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:29:13 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 15:31:47 by barmarti         ###   ########.fr       */
+/*   Updated: 2026/01/02 14:24:52 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class WrongAnimal
 		WrongAnimal &operator=( const WrongAnimal &rhs);
 		virtual const std::string &getType( void ) const ;
 
-		virtual void makeSound( void ) const ;
+		void makeSound( void ) const ;
 };
 
 #endif

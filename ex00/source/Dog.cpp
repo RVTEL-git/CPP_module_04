@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 12:34:32 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:47:24 by barmarti         ###   ########.fr       */
+/*   Updated: 2026/01/06 11:25:48 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ Dog::Dog( void ) : Animal("Dog")
 	return;
 }
 
-Dog::Dog( const Dog &copy)
+Dog::Dog( const Dog &copy) :  Animal(copy)
 {
 	std::cout << "Copy constructor Dog class called" << std::endl;
-	*this = copy;
-	return ;
 }
 
 Dog::~Dog( void )

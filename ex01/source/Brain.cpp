@@ -6,7 +6,7 @@
 /*   By: barmarti <barmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:43:48 by barmarti          #+#    #+#             */
-/*   Updated: 2025/12/30 17:46:47 by barmarti         ###   ########.fr       */
+/*   Updated: 2026/01/02 14:40:57 by barmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ Brain::Brain( void )
 Brain::Brain( Brain const &src )
 {
 	std::cout << "Brain copy constructor called" << std::endl;
-	*this = src;
-	return ;
+	for (int i = 0; i < 100; i++)
+		_ideas[i] = src._ideas[i];
 }
 
 Brain::~Brain()
@@ -36,11 +36,10 @@ Brain &Brain::operator=( const Brain &rhs )
 {
 	if (this != &rhs)
 	{
-		std::cout << "Brain copy assignment called" << std::endl;
 		for (int i = 0; i < 100; i++)
 			_ideas[i] = rhs._ideas[i];
 	}
-	return ( *this );
+	return *this;
 }
 
 void Brain::setIdea( int index, std::string idea )
@@ -52,6 +51,6 @@ void Brain::setIdea( int index, std::string idea )
 std::string Brain::getIdea( int index ) const
 {
 	if (index >= 0 && index < 100)
-		return (_ideas[index]);
-	return ( NULL );
+		return _ideas[index];
+	return "";
 }
